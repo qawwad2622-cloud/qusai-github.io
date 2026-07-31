@@ -1,107 +1,24 @@
+
+
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
     <title>👑 مطعم قصي 👑</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            background-color: black; /* الخلفية سودا */
-            color: #DAA520;
-            font-family: Arial;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        .header {
-            margin-bottom: 20px;
-        }
-        .menu-icon {
-            font-size: 35px;
-            color: #DAA520;
-            cursor: pointer;
-            float: right;
-            margin-left: 20px;
-        }
-        h1 {
-            font-size: 36px;
-            color: #DAA520;
-            margin: 0;
-        }
-
-        /* القائمة الجانبية */
-        .sidebar {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: #DAA520;
-            overflow-x: hidden;
-            transition: 0.3s;
-            padding-top: 80px;
-            z-index: 1000;
-        }
-        .sidebar a {
-            padding: 18px 30px;
-            text-decoration: none;
-            font-size: 24px;
-            color: black;
-            font-weight: bold;
-            display: block;
-            text-align: right;
-        }
+        body {background-color: black; color: #DAA520; font-family: Arial; margin: 0; padding: 20px; text-align: center;}
+        .header {margin-bottom: 20px;}
+        .menu-icon {font-size: 35px; color: #DAA520; cursor: pointer; float: right; margin-left: 20px;}
+        h1 {font-size: 36px; color: #DAA520; margin: 0;}
+        .sidebar {height: 100%; width: 0; position: fixed; top: 0; right: 0; background-color: #DAA520; overflow-x: hidden; transition: 0.3s; padding-top: 80px; z-index: 1000;}
+        .sidebar a {padding: 18px 30px; text-decoration: none; font-size: 24px; color: black; font-weight: bold; display: block; text-align: right;}
         .sidebar a:hover { background: #c99a1a; }
-        .sidebar .closebtn {
-            position: absolute;
-            top: 15px;
-            right: 25px;
-            font-size: 45px;
-            color: black;
-        }
-
-        /* صندوق المنيو الذهبي */
-        .menu-box {
-            background-color: #DAA520;
-            color: black;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px auto;
-            max-width: 500px;
-        }
-        h2 {
-            background: black;
-            color: #DAA520;
-            padding: 15px;
-            border-radius: 15px;
-            font-size: 30px;
-            margin: 25px 0 15px 0;
-        }
-        .item {
-            display: flex;
-            justify-content: space-between;
-            font-size: 22px;
-            margin: 15px 10px;
-            font-weight: bold;
-        }
-        .line {
-            border-bottom: 2px dashed black;
-            margin: 10px 0;
-        }
-
-        /* الازرار */
-        .btn {
-            background: #DAA520;
-            color: black;
-            border: none;
-            padding: 18px 50px;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 15px;
-            margin: 10px;
-            cursor: pointer;
-            width: 80%;
-            max-width: 300px;
-        }
+        .sidebar .closebtn {position: absolute; top: 15px; right: 25px; font-size: 45px; color: black;}
+        .menu-box {background-color: #DAA520; color: black; padding: 20px; border-radius: 10px; margin: 20px auto; max-width: 500px;}
+        h2 {background: black; color: #DAA520; padding: 15px; border-radius: 15px; font-size: 30px; margin: 25px 0 15px 0;}
+        .item {display: flex; justify-content: space-between; font-size: 22px; margin: 15px 10px; font-weight: bold;}
+        .line {border-bottom: 2px dashed black; margin: 10px 0;}
+        .btn {background: #DAA520; color: black; border: none; padding: 18px 50px; font-size: 24px; font-weight: bold; border-radius: 15px; margin: 10px; cursor: pointer; width: 80%; max-width: 300px;}
     </style>
 </head>
 <body>
@@ -114,77 +31,47 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="#">📋 المنيو</a>
-        <a href="#">💬 التواصل مع العملاء</a>
-        <a href="#">❓ استفسار من المطعم</a>
-        <a href="#">🚚 تتبع الطلب</a>
+        <a href="#" onclick="closeNav()">📋 المنيو</a>
+        
+        <!-- حذفت خدمة العملاء وحطيت هدول -->
+        <a href="https://wa.me/962777696341?text=مرحبا بدي استفسر عن..." onclick="closeNav()">❓ استفسار من المطعم</a>
+        <a href="https://wa.me/962777696341?text=مرحبا بدي اتتبع طلبي رقم..." onclick="closeNav()">🚚 تتبع الطلب</a>
     </div>
 
-    <!-- صندوق المنيو الذهبي -->
     <div class="menu-box">
         <h2>السندويشات</h2>
-        <div class="item"><span>شاورما دجاج</span><span>2.5 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>شاورما لحم</span><span>3 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>برغر لحم</span><span>4 د.ا</span></div>
-        <div class="line"></div>
+        <div class="item"><span>شاورما دجاج</span><span>2.5 د.ا</span></div><div class="line"></div>
+        <div class="item"><span>شاورما لحم</span><span>3 د.ا</span></div><div class="line"></div>
+        <div class="item"><span>برغر لحم</span><span>4 د.ا</span></div><div class="line"></div>
         <div class="item"><span>برغر دجاج</span><span>3.5 د.ا</span></div>
 
         <h2>البيتزا</h2>
-        <div class="item"><span>بيتزا مارجريتا</span><span>6 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>بيتزا خضار</span><span>7 د.ا</span></div>
-        <div class="line"></div>
+        <div class="item"><span>بيتزا مارجريتا</span><span>6 د.ا</span></div><div class="line"></div>
         <div class="item"><span>بيتزا دجاج</span><span>8 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>بيتزا لحم</span><span>9 د.ا</span></div>
 
         <h2>المشاوي</h2>
-        <div class="item"><span>نصف كيلو كباب</span><span>12 د.ا</span></div>
-        <div class="line"></div>
+        <div class="item"><span>نصف كيلو كباب</span><span>12 د.ا</span></div><div class="line"></div>
         <div class="item"><span>كيلو شقف</span><span>25 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>صحن مشاوي مشكل</span><span>18 د.ا</span></div>
 
         <h2>المقبلات</h2>
-        <div class="item"><span>كبة مقلية 6 حبات</span><span>3 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>حمص</span><span>2 د.ا</span></div>
-        <div class="line"></div>
+        <div class="item"><span>حمص</span><span>2 د.ا</span></div><div class="line"></div>
         <div class="item"><span>متبل</span><span>2.5 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>تبولة + فتوش</span><span>2.5 د.ا</span></div>
 
         <h2>السناكات والوجبات</h2>
-        <div class="item"><span>وجبة زنجر</span><span>4.5 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>وجبة برغر</span><span>4 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>سكلوب</span><span>3.5 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>فاهيتا</span><span>3.5 د.ا</span></div>
-        <div class="line"></div>
+        <div class="item"><span>وجبة زنجر</span><span>4.5 د.ا</span></div><div class="line"></div>
+        <div class="item"><span>سكلوب</span><span>3.5 د.ا</span></div><div class="line"></div>
+        <div class="item"><span>فاهيتا</span><span>3.5 د.ا</span></div><div class="line"></div>
         <div class="item"><span>وجبة ايطالي</span><span>5 د.ا</span></div>
 
         <h2>الحلويات</h2>
-        <div class="item"><span>كنافة نابلسية</span><span>4 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>بقلاوة</span><span>3.5 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>ام علي</span><span>3 د.ا</span></div>
-        <div class="line"></div>
+        <div class="item"><span>كنافة نابلسية</span><span>4 د.ا</span></div><div class="line"></div>
         <div class="item"><span>ايس كريم</span><span>2 د.ا</span></div>
 
-        <h2>المشروبات</h2> <!-- رجعتهم -->
-        <div class="item"><span>بيبسي / سفن</span><span>1 د.ا</span></div>
-        <div class="line"></div>
+        <h2>المشروبات</h2>
+        <div class="item"><span>بيبسي / سفن</span><span>1 د.ا</span></div><div class="line"></div>
         <div class="item"><span>عصير طبيعي</span><span>2 د.ا</span></div>
-        <div class="line"></div>
-        <div class="item"><span>شاي / قهوة</span><span>1.5 د.ا</span></div>
     </div>
 
-    <!-- الازرار -->
     <button class="btn" onclick="window.location.href='order.html'">ارسال طلب</button><br>
     <button class="btn">الغاء طلب</button>
 
@@ -193,11 +80,5 @@
         function closeNav() { document.getElementById("mySidebar").style.width = "0"; }
     </script>
 
-</body><!-- 1. الاستفسارات - بتفتح واتسابك مباشرة -->
-<a href="https://wa.me/962777696341?text=مرحبا بدي استفسر عن..." onclick="closeNav()">❓ استفسار من المطعم</a>
-
-<!-- 2. تتبع الطلب - بتفتح واتسابك برضو -->
-<a href="https://wa.me/962777696341?text=مرحبا بدي اتتبع طلبي رقم..." onclick="closeNav()">🚚 تتبع الطلب</a>
-</html><a href="#" onclick="closeNav()">💬 التواصل مع العملاء</a>
-
-
+</body>
+</html>
