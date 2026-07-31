@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+            
+    <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
     <title>👑 منيو مطعم قصي 👑</title>
@@ -7,7 +8,7 @@
         body {
             background-color: #DAA520;  
             border: 20px solid black;   
-            font-family: 'Arial', sans-serif;
+            font-family: Arial;
             margin: 0;
             padding: 0;
             min-height: 100vh;
@@ -15,20 +16,18 @@
         .header {
             background: black;
             color: #DAA520;
-            padding: 25px 20px;
+            padding: 18px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
-            z-index: 999;
         }
         .menu-icon {
-            font-size: 50px; /* خط كبير جدا */
+            font-size: 35px; /* حجم وسط */
             cursor: pointer;
-            font-weight: bold;
         }
-        h1 { text-align: center; font-size: 50px; margin: 0; font-weight: bold; } /* خط كبير */
+        h1 { text-align: center; font-size: 38px; margin: 0; } /* وسط */
 
         .sidebar {
             height: 100%;
@@ -38,14 +37,14 @@
             right: 0;
             background-color: black;
             overflow-x: hidden;
-            transition: 0.4s;
-            padding-top: 100px;
+            transition: 0.3s;
+            padding-top: 80px;
             z-index: 1000;
         }
         .sidebar a {
-            padding: 25px 35px;
+            padding: 18px 30px;
             text-decoration: none;
-            font-size: 32px; /* خط كبير للقائمة */
+            font-size: 24px; /* حجم وسط للقائمة */
             color: #DAA520;
             font-weight: bold;
             display: block;
@@ -53,40 +52,38 @@
         .sidebar a:hover { background: #333; }
         .sidebar .closebtn {
             position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 60px; /* X كبير */
+            top: 15px;
+            right: 25px;
+            font-size: 45px; /* X وسط */
             color: #DAA520;
         }
 
-        .content { padding: 20px; text-align: center; padding-bottom: 140px; }
+        .content { padding: 20px; text-align: center; padding-bottom: 120px; }
         h2 {
             background: black;
             color: #DAA520;
-            padding: 20px;
-            border-radius: 15px;
-            margin: 30px 20px;
-            font-size: 38px; /* عناوين كبيرة */
-            font-weight: bold;
+            padding: 12px;
+            border-radius: 10px;
+            margin: 25px 20px;
+            font-size: 28px; /* عناوين وسط */
         }
         .item {
             display: flex;
             justify-content: space-between;
-            margin: 22px 50px;
-            font-size: 28px; /* خط الاصناف كبير */
+            margin: 16px 40px;
+            font-size: 21px; /* الاصناف وسط وواضح */
             color: black;
-            border-bottom: 3px dashed black;
-            padding-bottom: 12px;
-            font-weight: bold;
+            border-bottom: 2px dashed black;
+            padding-bottom: 10px;
         }
-        .price { font-weight: bold; font-size: 30px; color: #8B0000; } /* السعر اكبر واحمر */
+        .price { font-weight: bold; font-size: 22px; }
 
         .footer {
             position: fixed;
             bottom: 0;
             width: 100%;
             background: black;
-            padding: 25px;
+            padding: 18px;
             text-align: center;
             left: 0;
         }
@@ -94,11 +91,11 @@
             background: #DAA520;
             color: black;
             border: none;
-            padding: 20px 50px;
-            font-size: 28px; /* ازرار كبيرة */
+            padding: 16px 40px;
+            font-size: 22px; /* ازرار وسط */
             font-weight: bold;
-            border-radius: 15px;
-            margin: 0 20px;
+            border-radius: 12px;
+            margin: 0 15px;
             cursor: pointer;
         }
     </style>
@@ -167,9 +164,9 @@
     </div>
 
     <script>
-        function openNav() { document.getElementById("mySidebar").style.width = "350px"; }
+        function openNav() { document.getElementById("mySidebar").style.width = "280px"; }
         function closeNav() { document.getElementById("mySidebar").style.width = "0"; }
     </script>
 
 </body>
-    </html>
+                                                                                     </html>
