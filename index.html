@@ -1,41 +1,41 @@
-            
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
-    <title>👑 منيو مطعم قصي 👑</title>
+    <title>👑 مطعم قصي 👑</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            background-color: #DAA520;  
-            border: 20px solid black;   
+            background-color: black; /* الخلفية سودا */
+            color: #DAA520;
             font-family: Arial;
             margin: 0;
-            padding: 0;
-            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
         }
         .header {
-            background: black;
-            color: #DAA520;
-            padding: 18px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
+            margin-bottom: 20px;
         }
         .menu-icon {
-            font-size: 35px; /* حجم وسط */
+            font-size: 35px;
+            color: #DAA520;
             cursor: pointer;
+            float: right;
+            margin-left: 20px;
         }
-        h1 { text-align: center; font-size: 38px; margin: 0; } /* وسط */
+        h1 {
+            font-size: 36px;
+            color: #DAA520;
+            margin: 0;
+        }
 
+        /* القائمة الجانبية */
         .sidebar {
             height: 100%;
             width: 0;
             position: fixed;
             top: 0;
             right: 0;
-            background-color: black;
+            background-color: #DAA520;
             overflow-x: hidden;
             transition: 0.3s;
             padding-top: 80px;
@@ -44,67 +44,72 @@
         .sidebar a {
             padding: 18px 30px;
             text-decoration: none;
-            font-size: 24px; /* حجم وسط للقائمة */
-            color: #DAA520;
+            font-size: 24px;
+            color: black;
             font-weight: bold;
             display: block;
+            text-align: right;
         }
-        .sidebar a:hover { background: #333; }
+        .sidebar a:hover { background: #c99a1a; }
         .sidebar .closebtn {
             position: absolute;
             top: 15px;
             right: 25px;
-            font-size: 45px; /* X وسط */
-            color: #DAA520;
+            font-size: 45px;
+            color: black;
         }
 
-        .content { padding: 20px; text-align: center; padding-bottom: 120px; }
+        /* صندوق المنيو الذهبي */
+        .menu-box {
+            background-color: #DAA520;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 500px;
+        }
         h2 {
             background: black;
             color: #DAA520;
-            padding: 12px;
-            border-radius: 10px;
-            margin: 25px 20px;
-            font-size: 28px; /* عناوين وسط */
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 30px;
+            margin: 25px 0 15px 0;
         }
         .item {
             display: flex;
             justify-content: space-between;
-            margin: 16px 40px;
-            font-size: 21px; /* الاصناف وسط وواضح */
-            color: black;
+            font-size: 22px;
+            margin: 15px 10px;
+            font-weight: bold;
+        }
+        .line {
             border-bottom: 2px dashed black;
-            padding-bottom: 10px;
+            margin: 10px 0;
         }
-        .price { font-weight: bold; font-size: 22px; }
 
-        .footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background: black;
-            padding: 18px;
-            text-align: center;
-            left: 0;
-        }
+        /* الازرار */
         .btn {
             background: #DAA520;
             color: black;
             border: none;
-            padding: 16px 40px;
-            font-size: 22px; /* ازرار وسط */
+            padding: 18px 50px;
+            font-size: 24px;
             font-weight: bold;
-            border-radius: 12px;
-            margin: 0 15px;
+            border-radius: 15px;
+            margin: 10px;
             cursor: pointer;
+            width: 80%;
+            max-width: 300px;
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1>👑 مطعم قصي 👑</h1>
         <span class="menu-icon" onclick="openNav()">☰</span>
+        <h1>مطعم قصي 👑</h1>
+        <div style="font-size: 40px;">👑</div>
     </div>
 
     <div id="mySidebar" class="sidebar">
@@ -115,53 +120,73 @@
         <a href="#">🚚 تتبع الطلب</a>
     </div>
 
-    <div class="content">
+    <!-- صندوق المنيو الذهبي -->
+    <div class="menu-box">
         <h2>السندويشات</h2>
-        <div class="item"><span>شاورما دجاج</span><span class="price">2.5 د.ا</span></div>
-        <div class="item"><span>شاورما لحم</span><span class="price">3 د.ا</span></div>
-        <div class="item"><span>برغر لحم</span><span class="price">4 د.ا</span></div>
-        <div class="item"><span>برغر دجاج</span><span class="price">3.5 د.ا</span></div>
+        <div class="item"><span>شاورما دجاج</span><span>2.5 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>شاورما لحم</span><span>3 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>برغر لحم</span><span>4 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>برغر دجاج</span><span>3.5 د.ا</span></div>
 
         <h2>البيتزا</h2>
-        <div class="item"><span>بيتزا مارجريتا</span><span class="price">6 د.ا</span></div>
-        <div class="item"><span>بيتزا خضار</span><span class="price">7 د.ا</span></div>
-        <div class="item"><span>بيتزا دجاج</span><span class="price">8 د.ا</span></div>
-        <div class="item"><span>بيتزا لحم</span><span class="price">9 د.ا</span></div>
+        <div class="item"><span>بيتزا مارجريتا</span><span>6 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>بيتزا خضار</span><span>7 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>بيتزا دجاج</span><span>8 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>بيتزا لحم</span><span>9 د.ا</span></div>
 
         <h2>المشاوي</h2>
-        <div class="item"><span>نصف كيلو كباب</span><span class="price">12 د.ا</span></div>
-        <div class="item"><span>كيلو شقف</span><span class="price">25 د.ا</span></div>
-        <div class="item"><span>صحن مشاوي مشكل</span><span class="price">18 د.ا</span></div>
+        <div class="item"><span>نصف كيلو كباب</span><span>12 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>كيلو شقف</span><span>25 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>صحن مشاوي مشكل</span><span>18 د.ا</span></div>
 
         <h2>المقبلات</h2>
-        <div class="item"><span>كبة مقلية 6 حبات</span><span class="price">3 د.ا</span></div>
-        <div class="item"><span>حمص</span><span class="price">2 د.ا</span></div>
-        <div class="item"><span>متبل</span><span class="price">2.5 د.ا</span></div>
-        <div class="item"><span>تبولة + فتوش</span><span class="price">2.5 د.ا</span></div>
+        <div class="item"><span>كبة مقلية 6 حبات</span><span>3 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>حمص</span><span>2 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>متبل</span><span>2.5 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>تبولة + فتوش</span><span>2.5 د.ا</span></div>
 
         <h2>السناكات والوجبات</h2>
-        <div class="item"><span>وجبة زنجر</span><span class="price">4.5 د.ا</span></div>
-        <div class="item"><span>وجبة برغر</span><span class="price">4 د.ا</span></div>
-        <div class="item"><span>سكلوب</span><span class="price">3.5 د.ا</span></div>
-        <div class="item"><span>فاهيتا</span><span class="price">3.5 د.ا</span></div>
-        <div class="item"><span>وجبة ايطالي</span><span class="price">5 د.ا</span></div>
+        <div class="item"><span>وجبة زنجر</span><span>4.5 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>وجبة برغر</span><span>4 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>سكلوب</span><span>3.5 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>فاهيتا</span><span>3.5 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>وجبة ايطالي</span><span>5 د.ا</span></div>
 
         <h2>الحلويات</h2>
-        <div class="item"><span>كنافة نابلسية</span><span class="price">4 د.ا</span></div>
-        <div class="item"><span>بقلاوة</span><span class="price">3.5 د.ا</span></div>
-        <div class="item"><span>ام علي</span><span class="price">3 د.ا</span></div>
-        <div class="item"><span>ايس كريم</span><span class="price">2 د.ا</span></div>
+        <div class="item"><span>كنافة نابلسية</span><span>4 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>بقلاوة</span><span>3.5 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>ام علي</span><span>3 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>ايس كريم</span><span>2 د.ا</span></div>
 
-        <h2>المشروبات</h2>
-        <div class="item"><span>بيبسي / سفن</span><span class="price">1 د.ا</span></div>
-        <div class="item"><span>عصير طبيعي</span><span class="price">2 د.ا</span></div>
-        <div class="item"><span>شاي / قهوة</span><span class="price">1.5 د.ا</span></div>
+        <h2>المشروبات</h2> <!-- رجعتهم -->
+        <div class="item"><span>بيبسي / سفن</span><span>1 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>عصير طبيعي</span><span>2 د.ا</span></div>
+        <div class="line"></div>
+        <div class="item"><span>شاي / قهوة</span><span>1.5 د.ا</span></div>
     </div>
 
-    <div class="footer">
-        <button class="btn" onclick="window.location.href='order.html'">ارسال طلب</button>
-        <button class="btn">الغاء طلب</button>
-    </div>
+    <!-- الازرار -->
+    <button class="btn" onclick="window.location.href='order.html'">ارسال طلب</button><br>
+    <button class="btn">الغاء طلب</button>
 
     <script>
         function openNav() { document.getElementById("mySidebar").style.width = "280px"; }
@@ -169,4 +194,4 @@
     </script>
 
 </body>
-                                                                                     </html>
+</html>
