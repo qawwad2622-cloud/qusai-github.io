@@ -1,34 +1,94 @@
+
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
     <title>ارسال طلب - مطعم قصي</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { background: #DAA520; border: 20px solid black; font-family: Arial; padding: 20px; }
-        h1 { text-align: center; color: black; font-size: 40px; }
-        form { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 15px; }
-        label { font-size: 22px; font-weight: bold; display: block; margin-top: 15px; }
-        input, textarea { width: 100%; padding: 12px; font-size: 20px; margin-top: 5px; border: 2px solid black; border-radius: 8px; }
-        .btn-send { background: black; color: #DAA520; padding: 15px; font-size: 24px; border: none; width: 100%; margin-top: 20px; border-radius: 10px; cursor: pointer; }
-        .btn-back { background: #555; color: white; padding: 10px; font-size: 20px; border: none; width: 100%; margin-top: 10px; border-radius: 10px; }
+        body {
+            background-color: black; /* نفس الخلفية السودا */
+            color: #DAA520;
+            font-family: Arial;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            color: #DAA520;
+        }
+        .form-box {
+            background-color: #DAA520; /* صندوق ذهبي */
+            color: black;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 450px;
+            text-align: right;
+        }
+        label {
+            font-size: 22px;
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        input, textarea, select {
+            width: 95%;
+            padding: 14px;
+            font-size: 20px;
+            border: 3px solid black;
+            border-radius: 10px;
+            background: white;
+            font-family: Arial;
+        }
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+        .btn {
+            background: black;
+            color: #DAA520;
+            border: none;
+            padding: 18px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 15px;
+            margin-top: 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn:hover {
+            background: #333;
+        }
     </style>
 </head>
 <body>
-    <h1>📝 ارسال طلب جديد</h1>
-    <form>
-        <label>الاسم</label>
-        <input type="text" placeholder="اكتب اسمك" required>
-        
-        <label>رقم الهاتف</label>
-        <input type="tel" placeholder="07xxxxxxxx" required>
-        
-        <label>العنوان</label>
-        <textarea placeholder="اكتب عنوانك بالتفصيل" rows="3" required></textarea>
-        
-        <label>ملاحظات على الطلب</label>
-        <textarea placeholder="مثلا: بدون بصل، زيادة جبنة" rows="3"></textarea>
-        
-        <button type="submit" class="btn-send">تأكيد الطلب</button>
-        <button type="button" class="btn-back" onclick="window.location.href='index.html'">الرجوع للمنيو</button>
-    </form>
+
+    <h1>👑 ارسال طلب 👑</h1>
+
+    <div class="form-box">
+        <form>
+            <label>1. شو بدك تطلب؟</label>
+            <textarea placeholder="مثال: 2 شاورما دجاج + بيبسي + كنافة" required></textarea>
+
+            <label>2. الاسم الثلاثي</label>
+            <input type="text" placeholder="اكتب اسمك" required>
+
+            <label>3. رقم التلفون</label>
+            <input type="tel" placeholder="07xxxxxxxx" required>
+
+            <label>4. العنوان بالتفصيل</label>
+            <textarea placeholder="مثال: عمان - جبل الحسين - شارع خالد بن الوليد - بجانب مسجد..." required></textarea>
+
+            <label>5. ملاحظات</label>
+            <textarea placeholder="مثال: بدون بصل , الدفع كاش" ></textarea>
+
+            <button type="submit" class="btn">تأكيد الطلب</button>
+        </form>
+    </div>
+
+    <button class="btn" style="background:#DAA520; color:black;" onclick="window.location.href='index.html'">الرجوع للمنيو</button>
+
 </body>
 </html>
