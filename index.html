@@ -79,6 +79,18 @@
         function openNav() { document.getElementById("mySidebar").style.width = "280px"; }
         function closeNav() { document.getElementById("mySidebar").style.width = "0"; }
     </script>
+    <button class="btn" onclick="sendOrder()">📲 اطلب على الواتساب</button>
+    <script>
+function sendOrder() {
+    let phone = "962777696341"; // حط رقمك هون
+    let message = "مرحبا مطعم قصي 👑%0Aبدي اطلب:%0A";
+    message += "- ... اكتب الاكل هون%0A"; 
+    message += "الاسم: ...%0Aالعنوان: ...";
+    
+    let url = "https://wa.me/" + phone + "?text=" + message;
+    window.open(url, '_blank');
+}
+</script>
 
 </body>
 </html>
