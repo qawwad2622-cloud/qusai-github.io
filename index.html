@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
-    <title>منيو مطعم قصي</title>
+    <title>👑 منيو مطعم قصي 👑</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            background-color: #DAA520;  /* ذهبي ملكي */
+            background-color: #DAA520;  
             border: 20px solid black;   
-            font-family: Arial;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             min-height: 100vh;
         }
-        /* الهيدر العلوي */
         .header {
             background: black;
             color: #DAA520;
-            padding: 15px 20px;
+            padding: 25px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
+            z-index: 999;
         }
         .menu-icon {
-            font-size: 30px;
+            font-size: 50px; /* خط كبير جدا */
             cursor: pointer;
+            font-weight: bold;
         }
-        h1 { text-align: center; font-size: 35px; margin: 0; }
+        h1 { text-align: center; font-size: 50px; margin: 0; font-weight: bold; } /* خط كبير */
 
-        /* القائمة الجانبية */
         .sidebar {
             height: 100%;
             width: 0;
@@ -37,54 +38,55 @@
             right: 0;
             background-color: black;
             overflow-x: hidden;
-            transition: 0.3s;
-            padding-top: 60px;
+            transition: 0.4s;
+            padding-top: 100px;
             z-index: 1000;
         }
         .sidebar a {
-            padding: 15px 25px;
+            padding: 25px 35px;
             text-decoration: none;
-            font-size: 22px;
+            font-size: 32px; /* خط كبير للقائمة */
             color: #DAA520;
+            font-weight: bold;
             display: block;
-            transition: 0.3s;
         }
         .sidebar a:hover { background: #333; }
         .sidebar .closebtn {
             position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 40px;
+            top: 20px;
+            right: 30px;
+            font-size: 60px; /* X كبير */
             color: #DAA520;
         }
 
-        /* محتوى المنيو */
-        .content { padding: 20px; text-align: center; }
+        .content { padding: 20px; text-align: center; padding-bottom: 140px; }
         h2 {
             background: black;
             color: #DAA520;
-            padding: 10px;
-            border-radius: 10px;
-            margin: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 20px;
+            font-size: 38px; /* عناوين كبيرة */
+            font-weight: bold;
         }
         .item {
             display: flex;
             justify-content: space-between;
-            margin: 15px 30px;
-            font-size: 20px;
+            margin: 22px 50px;
+            font-size: 28px; /* خط الاصناف كبير */
             color: black;
-            border-bottom: 1px dashed black;
-            padding-bottom: 8px;
+            border-bottom: 3px dashed black;
+            padding-bottom: 12px;
+            font-weight: bold;
         }
-        .price { font-weight: bold; }
+        .price { font-weight: bold; font-size: 30px; color: #8B0000; } /* السعر اكبر واحمر */
 
-        /* زر الطلب تحت */
         .footer {
             position: fixed;
             bottom: 0;
             width: 100%;
             background: black;
-            padding: 15px;
+            padding: 25px;
             text-align: center;
             left: 0;
         }
@@ -92,62 +94,82 @@
             background: #DAA520;
             color: black;
             border: none;
-            padding: 15px 40px;
-            font-size: 20px;
+            padding: 20px 50px;
+            font-size: 28px; /* ازرار كبيرة */
             font-weight: bold;
-            border-radius: 10px;
-            margin: 0 10px;
+            border-radius: 15px;
+            margin: 0 20px;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <!-- الهيدر مع ايقونة المنيو -->
     <div class="header">
-        <h1>مطعم قصي</h1>
+        <h1>👑 مطعم قصي 👑</h1>
         <span class="menu-icon" onclick="openNav()">☰</span>
     </div>
 
-    <!-- القائمة الجانبية -->
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="#">📋 المنيو</a>
         <a href="#">💬 التواصل مع العملاء</a>
-        <a href="#">❓ الاستفسار</a>
+        <a href="#">❓ استفسار من المطعم</a>
         <a href="#">🚚 تتبع الطلب</a>
     </div>
 
-    <!-- محتوى المنيو -->
     <div class="content">
         <h2>السندويشات</h2>
         <div class="item"><span>شاورما دجاج</span><span class="price">2.5 د.ا</span></div>
         <div class="item"><span>شاورما لحم</span><span class="price">3 د.ا</span></div>
         <div class="item"><span>برغر لحم</span><span class="price">4 د.ا</span></div>
+        <div class="item"><span>برغر دجاج</span><span class="price">3.5 د.ا</span></div>
 
         <h2>البيتزا</h2>
         <div class="item"><span>بيتزا مارجريتا</span><span class="price">6 د.ا</span></div>
+        <div class="item"><span>بيتزا خضار</span><span class="price">7 د.ا</span></div>
         <div class="item"><span>بيتزا دجاج</span><span class="price">8 د.ا</span></div>
+        <div class="item"><span>بيتزا لحم</span><span class="price">9 د.ا</span></div>
+
+        <h2>المشاوي</h2>
+        <div class="item"><span>نصف كيلو كباب</span><span class="price">12 د.ا</span></div>
+        <div class="item"><span>كيلو شقف</span><span class="price">25 د.ا</span></div>
+        <div class="item"><span>صحن مشاوي مشكل</span><span class="price">18 د.ا</span></div>
+
+        <h2>المقبلات</h2>
+        <div class="item"><span>كبة مقلية 6 حبات</span><span class="price">3 د.ا</span></div>
+        <div class="item"><span>حمص</span><span class="price">2 د.ا</span></div>
+        <div class="item"><span>متبل</span><span class="price">2.5 د.ا</span></div>
+        <div class="item"><span>تبولة + فتوش</span><span class="price">2.5 د.ا</span></div>
+
+        <h2>السناكات والوجبات</h2>
+        <div class="item"><span>وجبة زنجر</span><span class="price">4.5 د.ا</span></div>
+        <div class="item"><span>وجبة برغر</span><span class="price">4 د.ا</span></div>
+        <div class="item"><span>سكلوب</span><span class="price">3.5 د.ا</span></div>
+        <div class="item"><span>فاهيتا</span><span class="price">3.5 د.ا</span></div>
+        <div class="item"><span>وجبة ايطالي</span><span class="price">5 د.ا</span></div>
 
         <h2>الحلويات</h2>
         <div class="item"><span>كنافة نابلسية</span><span class="price">4 د.ا</span></div>
-        <div style="padding-bottom: 100px;"></div> <!-- فراغ عشان الزر -->
+        <div class="item"><span>بقلاوة</span><span class="price">3.5 د.ا</span></div>
+        <div class="item"><span>ام علي</span><span class="price">3 د.ا</span></div>
+        <div class="item"><span>ايس كريم</span><span class="price">2 د.ا</span></div>
+
+        <h2>المشروبات</h2>
+        <div class="item"><span>بيبسي / سفن</span><span class="price">1 د.ا</span></div>
+        <div class="item"><span>عصير طبيعي</span><span class="price">2 د.ا</span></div>
+        <div class="item"><span>شاي / قهوة</span><span class="price">1.5 د.ا</span></div>
     </div>
 
-    <!-- الازرار تحت -->
     <div class="footer">
         <button class="btn" onclick="window.location.href='order.html'">ارسال طلب</button>
         <button class="btn">الغاء طلب</button>
     </div>
 
     <script>
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "250px";
-        }
-        function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-        }
+        function openNav() { document.getElementById("mySidebar").style.width = "350px"; }
+        function closeNav() { document.getElementById("mySidebar").style.width = "0"; }
     </script>
 
 </body>
-        </html>
+    </html>
